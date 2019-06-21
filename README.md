@@ -1,22 +1,12 @@
+## Rates CRUD Task  [![Build Status](https://travis-ci.org/proserve/ratetask.svg?branch=master)](https://travis-ci.org/proserve/ratetask) 
 if  you are using mac you need to install postgres in your machine to be able to install dependencies in requirements.txt
 ```shell
 brew install postgresql
 ```  
 
-## progress
-##### - GET requirements ==> done
-##### - POST requirements ==> in-progress
-##### - Batch processing ==> in-progress
-
 ## dependencies
 ```shell
-pip install -r requirements.txt --upgrade --target ./lib
-```
-
-## Test
-form root directory run
-```shell 
-pytest test*
+sudo pip install -r requirements.txt
 ```
 
 ## Run app
@@ -32,4 +22,9 @@ mv .env_copy .env
 #### run the app
 ```shell 
 python app.py
+```
+
+## Test
+```shell 
+pytest test*
 ```
