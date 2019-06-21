@@ -1,12 +1,8 @@
+## Rates CRUD Task  [![Build Status](https://travis-ci.org/proserve/ratetask.svg?branch=master)](https://travis-ci.org/proserve/ratetask) 
 if  you are using mac you need to install postgres in your machine to be able to install dependencies in requirements.txt
 ```shell
 brew install postgresql
 ```  
-
-## progress
-##### - GET requirements ==> done
-##### - POST requirements ==> in-progress
-##### - Batch processing ==> in-progress
 
 ## dependencies
 ```shell
