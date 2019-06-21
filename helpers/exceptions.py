@@ -10,7 +10,12 @@ class JSONExceptionHandler(object):
 
     @staticmethod
     def std_handler(error):
-        response = jsonify(message=error.description)
+        message = str(error)
+        if hasattr(error, "description"):
+            message = error.description
+        elif hasattr(error, "message"):
+            message = error.message
+        response = jsonify(message=message)
         response.status_code = error.code if isinstance(error, HTTPException) else 500
         return response
 

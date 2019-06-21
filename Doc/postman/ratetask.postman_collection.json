@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "43ddbb2d-2874-40de-95dd-6528a1e53e07",
+		"name": "ratetask",
+		"description": "REST API examples for xeneta tasks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "rates",
+			"item": [
+				{
+					"name": "Retirve rates",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/rates?date_from=2016-01-01&date_to=2016-01-31&origin=china_main&destination=northern_europe",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"rates"
+							],
+							"query": [
+								{
+									"key": "date_from",
+									"value": "2016-01-01"
+								},
+								{
+									"key": "date_to",
+									"value": "2016-01-31"
+								},
+								{
+									"key": "origin",
+									"value": "china_main"
+								},
+								{
+									"key": "destination",
+									"value": "northern_europe"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Prices with currency conversion",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"date_from\": \"2016-01-01\",\n  \"date_to\": \"2016-01-31\",\n  \"origin_code\": \"CNCWN\",\n  \"destination_code\": \"DKFRC\",\n  \"price\": 800000,\n  \"currency\": \"AED\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/rates",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"rates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrives rates (null average )",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/rates_null?date_from=2016-01-24&date_to=2016-01-27&origin=CNCWN&destination=DKFRC",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"rates_null"
+							],
+							"query": [
+								{
+									"key": "date_from",
+									"value": "2016-01-24"
+								},
+								{
+									"key": "date_to",
+									"value": "2016-01-27"
+								},
+								{
+									"key": "origin",
+									"value": "CNCWN"
+								},
+								{
+									"key": "destination",
+									"value": "DKFRC"
+								}
+							]
+						},
+						"description": "API endpoint return an empty value (JSON null) for days on which there are less than 3 prices in total.\n\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rates_new",
+			"item": [
+				{
+					"name": "Retireve Rates new",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/rates_new?date_from=2016-01-01&date_to=2016-01-31&origin=china_main&destination=northern_europe",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"rates_new"
+							],
+							"query": [
+								{
+									"key": "date_from",
+									"value": "2016-01-01"
+								},
+								{
+									"key": "date_to",
+									"value": "2016-01-31"
+								},
+								{
+									"key": "origin",
+									"value": "china_main"
+								},
+								{
+									"key": "destination",
+									"value": "northern_europe"
+								}
+							]
+						},
+						"description": "this query will query from the new DB"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrives rates (null average ) new",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/rates_null_new?date_from=2016-01-24&date_to=2016-01-27&origin=CNCWN&destination=DKFRC",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"rates_null_new"
+							],
+							"query": [
+								{
+									"key": "date_from",
+									"value": "2016-01-24"
+								},
+								{
+									"key": "date_to",
+									"value": "2016-01-27"
+								},
+								{
+									"key": "origin",
+									"value": "CNCWN"
+								},
+								{
+									"key": "destination",
+									"value": "DKFRC"
+								}
+							]
+						},
+						"description": "API endpoint return an empty value (JSON null) for days on which there are less than 3 prices in total.\n\n"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

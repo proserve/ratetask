@@ -2,14 +2,21 @@ if  you are using mac you need to install postgres in your machine to be able to
 ```shell
 brew install postgresql
 ```  
+
 ## progress
 ##### - GET requirements ==> done
 ##### - POST requirements ==> in-progress
 ##### - Batch processing ==> in-progress
+
+## dependencies
+```shell
+pip install -r requirements.txt --upgrade --target ./lib
+```
+
 ## Test
 form root directory run
 ```shell 
-pytest
+pytest test*
 ```
 
 ## Run app
