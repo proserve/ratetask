@@ -46,6 +46,3 @@ python app.py
 pytest test*
 ```
 
-
-## Batch Processing
-
