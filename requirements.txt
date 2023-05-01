@@ -1,5 +1,5 @@
 werkzeug
-Flask==1.0.3
+Flask==2.3.2
 python-dotenv==0.10.3
 psycopg2==2.8.2
 pytest==4.6.3
